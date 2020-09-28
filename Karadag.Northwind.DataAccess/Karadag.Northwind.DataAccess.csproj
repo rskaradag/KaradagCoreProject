@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Karadag.Core\Karadag.Core.csproj" />
+    <ProjectReference Include="..\Karadag.Northwind.Entities\Karadag.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

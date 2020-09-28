@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\bootstrap\**" />
+    <Compile Remove="wwwroot\jquery-validation-unobtrusive\**" />
+    <Compile Remove="wwwroot\jquery-validation\**" />
+    <Compile Remove="wwwroot\jquery\**" />
+    <Content Remove="wwwroot\bootstrap\**" />
+    <Content Remove="wwwroot\jquery-validation-unobtrusive\**" />
+    <Content Remove="wwwroot\jquery-validation\**" />
+    <Content Remove="wwwroot\jquery\**" />
+    <EmbeddedResource Remove="wwwroot\bootstrap\**" />
+    <EmbeddedResource Remove="wwwroot\jquery-validation-unobtrusive\**" />
+    <EmbeddedResource Remove="wwwroot\jquery-validation\**" />
+    <EmbeddedResource Remove="wwwroot\jquery\**" />
+    <None Remove="wwwroot\bootstrap\**" />
+    <None Remove="wwwroot\jquery-validation-unobtrusive\**" />
+    <None Remove="wwwroot\jquery-validation\**" />
+    <None Remove="wwwroot\jquery\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Karadag.Core\Karadag.Core.csproj" />
+    <ProjectReference Include="..\Karadag.Northwind.Business\Karadag.Northwind.Business.csproj" />
+    <ProjectReference Include="..\Karadag.Northwind.Entities\Karadag.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
