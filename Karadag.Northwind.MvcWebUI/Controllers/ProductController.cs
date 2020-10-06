@@ -1,5 +1,6 @@
 ﻿using Karadag.Northwind.Business.Abstract;
 using Karadag.Northwind.MvcWebUI.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -33,5 +34,17 @@ namespace Karadag.Northwind.MvcWebUI.Controllers
 
             return View(model);
         }
+
+        //public string Session() {
+
+        //    HttpContext.Session.SetString("city", "Ankara");
+        //    HttpContext.Session.SetInt32("age", 32);
+
+        //    HttpContext.Session.GetString("city");
+        //    HttpContext.Session.GetInt32("age");
+
+        //}
+
+
     }
 }

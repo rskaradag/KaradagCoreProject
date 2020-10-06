@@ -7,8 +7,7 @@ using System.Text;
 
 namespace Karadag.Northwind.DataAccess.Concrete.EntityFramework
 {
-    public class EfProductDal:EfEntityRepositoryBase<Product,NorthwindContext>,IProductDal
+    public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
     {
-
     }
 }

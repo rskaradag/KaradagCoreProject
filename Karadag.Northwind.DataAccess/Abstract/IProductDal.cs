@@ -6,8 +6,7 @@ using System.Text;
 
 namespace Karadag.Northwind.DataAccess.Abstract
 {
-    public interface IProductDal:IEntityRepository<Product>
+    public interface IProductDal : IEntityRepository<Product>
     {
-        //Custom Operations
     }
 }

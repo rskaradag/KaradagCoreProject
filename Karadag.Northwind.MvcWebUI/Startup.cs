@@ -7,6 +7,7 @@ using Karadag.Northwind.Business.Concrete;
 using Karadag.Northwind.DataAccess.Abstract;
 using Karadag.Northwind.DataAccess.Concrete.EntityFramework;
 using Karadag.Northwind.MvcWebUI.Middlewares;
+using Karadag.Northwind.MvcWebUI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -24,6 +25,11 @@ namespace Karadag.Northwind.MvcWebUI
             services.AddScoped<IProductDal, EfProductDal>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDal,EfCategoryDal>();
+            services.AddSingleton<ICartSessionService, CartSessionService>();
+            services.AddSingleton<ICartService, CartService>();
+            services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
+            services.AddSession();
+            services.AddDistributedMemoryCache();
             services.AddMvc();
         }
 
@@ -37,7 +43,7 @@ namespace Karadag.Northwind.MvcWebUI
 
             app.UseFileServer();
             app.UseNodeModules(env.ContentRootPath);
-
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
         }
     }

@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
 
     <link href="@Url.Content("~/bootstrap/dist/css/bootstrap.css")" rel="stylesheet" />
-    <script src="@Url.Content("~/jquery/dist/jquery.min.js")"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="@Url.Content("~/bootstrap/dist/js/bootstrap.js")"></script>
 </head>
 <body>
@@ -38,10 +38,14 @@
         @await Component.InvokeAsync("CategoryList")
     </div>
     <div class="col-md-10">
+        @if (TempData["message"] != null) {
+            <div class="alert alert-info" role="alert">@TempData["message"]</div>
+        }
         @RenderBody()
     </div>
     <div class="col-md-12">
         Footer
     </div>
-</body>
-</html>
+
+</body >
+</html >
